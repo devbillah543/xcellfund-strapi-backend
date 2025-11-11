@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_carousel_carousel",
+    "info": {
+        "displayName": "Carousel",
+        "description": "A carousel component that displays multiple carousel items in a sliding format."
+    },
+    "attributes": {
+        "items": {
+            "type": "component",
+            "component": "carousel.carousel-item",
+            "repeatable": true,
+            "required": true,
+            "description": "The individual carousel items to be displayed."
+        }
+    }
+}

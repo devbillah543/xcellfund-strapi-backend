@@ -1,0 +1,40 @@
+{
+    "collectionName": "components_form_input",
+    "info": {
+        "displayName": "Text Input",
+        "description": "Form text input component for user input"
+    },
+    "attributes": {
+        "label": {
+            "type": "string",
+            "required": false,
+            "description": "Visible label shown for the input field"
+        },
+        "name": {
+            "type": "string",
+            "required": false,
+            "description": "Machine-friendly field name (used as the input's name/id; no spaces)"
+        },
+        "type": {
+            "type": "enumeration",
+            "enum": ["text", "email", "tel", "password", "number", "textarea"],
+            "default": "text",
+            "description": "HTML input type or 'textarea' for multi-line input"
+        },
+        "placeholder": {
+            "type": "string",
+            "description": "Placeholder text displayed inside the field when empty"
+        },
+        "iconify": {
+            "type": "boolean",
+            "default": false,
+            "description": "Whether to use Iconify for the input field"
+        },
+        "icon_position": {
+            "type": "enumeration",
+            "enum": ["left", "right"],
+            "default": "left",
+            "description": "Placement of the icon relative to the input field when iconify is enabled"
+        }
+    }
+}

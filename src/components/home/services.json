@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_services",
+  "info": {
+    "displayName": "Services",
+    "description": "A component to showcase various services offered, each represented by a card."
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "card.card",
+      "repeatable": true,
+      "required": true,
+      "description": "A list of service cards to display the services offered."
+    }
+  }
+}

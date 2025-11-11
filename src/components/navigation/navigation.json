@@ -1,0 +1,21 @@
+{
+    "collectionName": "components_navigation_navigation",
+    "info": {
+        "displayName": "Navigation",
+        "description": "Navigation component containing multiple menu items"
+    },
+    "attributes": {
+        "brand":{
+            "type": "component",
+            "component": "brand.brand",
+            "required": true,
+            "description": "Brand/logo component for the navigation bar"
+        },
+        "menus": {
+            "type": "component",
+            "component": "navigation.menu",
+            "repeatable": true,
+            "description": "List of individual menus"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "collectionName": "components_navigation_menu",
+    "info": {
+        "displayName": "Menu",
+        "description": "Navigation menu component containing multiple link items"
+    },
+    "attributes": {
+        "item": {
+            "type": "component",
+            "component": "link.link",
+            "repeatable": false,
+            "required": true,
+            "description": "Primary menu item (required)"
+        },
+        "subitems": {
+            "type": "component",
+            "component": "link.link",
+            "repeatable": true,
+            "required": false,
+            "description": "One or more sub-menu items (required, repeatable)"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_home_form",
+  "info": {
+    "displayName": "Form",
+    "description": "A form component for the home page."
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "description": "Title of the form."
+    },
+    "fields": {
+      "type": "component",
+      "component": "form.input",
+      "repeatable": true
+    },
+    "submit_link": {
+      "type": "component",
+      "component": "link.link",
+      "repeatable": false,
+      "required": false,
+      "description": "Submit button link (optional)"
+    }
+  }
+}

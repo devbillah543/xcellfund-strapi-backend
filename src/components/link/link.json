@@ -1,0 +1,57 @@
+{
+  "collectionName": "components_link_link",
+  "info": {
+    "displayName": "Link",
+    "description": "Reusable link component with customizable URL, text, and styles"
+  },
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true,
+      "description": "Destination URL or address (e.g., '/about', 'https://example.com', 'mailto:me@example.com', 'tel:+123456789')"
+    },
+    "url_type": {
+      "type": "enumeration",
+      "enum": ["text", "email", "phone"],
+      "default": "text",
+      "description": "Type of URL; affects behavior and validation: 'text' for normal links, 'email' for mailto:, 'phone' for tel:"
+    },
+    "link_type": {
+      "type": "enumeration",
+      "enum": ["link", "button"],
+      "default": "link",
+      "description": "Presentation style for the component: 'link' renders inline hyperlink, 'button' renders a styled action button"
+    },
+    "label": {
+      "type": "string",
+      "required": false,
+      "description": "Visible text displayed for the link or button"
+    },
+    "openInNewTab": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, the link will open in a new browser tab/window (adds target='_blank')"
+    },
+    "iconify": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, an icon will be shown alongside the label (requires icon configuration elsewhere)"
+    },
+    "icon_position": {
+      "type": "enumeration",
+      "enum": ["left", "right"],
+      "default": "left",
+      "description": "Placement of the icon relative to the label when iconify is enabled"
+    },
+    "social_media": {
+      "type": "boolean",
+      "default": false,
+      "description": "When true, applies social media link styles (e.g., for Facebook, Twitter icons)"
+    },
+    "social_media_platform": {
+      "type": "enumeration",
+      "enum": ["facebook", "twitter", "instagram", "linkedin", "youtube"],
+      "description": "Specifies the social media platform for styling when social_media is true"
+    }
+  }
+}

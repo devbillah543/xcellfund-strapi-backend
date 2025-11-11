@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_seo_seo",
+  "info": {
+    "displayName": "SEO",
+    "description": "Component for managing SEO metadata for pages"
+  },
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "required": false
+    },
+    "metaDescription": {
+      "type": "text",
+      "required": false
+    },
+    "metaKeywords": {
+      "type": "string",
+      "required": false
+    },
+    "canonicalURL": {
+      "type": "string",
+      "required": false
+    },
+    "noIndex": {
+      "type": "boolean",
+      "default": false
+    },
+    "openGraphImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

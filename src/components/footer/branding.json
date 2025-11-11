@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_footer_branding",
+  "info": {
+    "displayName": "Branding",
+    "description": "Footer branding component for displaying logos and brand information"
+  },
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"],
+      "description": "Logo image for the footer branding (required)"
+    },
+    "brand_name": {
+      "type": "string",
+      "required": true,
+      "description": "Name of the brand or organization (required)"
+    },
+    "tagline": {
+      "type": "string",
+      "required": false,
+      "description": "Optional tagline or slogan for the brand"
+    },
+    "description": {
+      "type": "text",
+      "required": false,
+      "description": "Optional description or about text for the brand"
+    }
+  }
+}

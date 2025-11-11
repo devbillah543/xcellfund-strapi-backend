@@ -1,0 +1,35 @@
+{
+    "collectionName": "components_card_card",
+    "info": {
+        "displayName": "Basic Card",
+        "description": "A card component to highlight features with an icon, title, description, and optional link."
+    },
+    "attributes": {
+        "icon": {
+            "type": "string",
+            "required": false,
+            "description": "Icon name or identifier to visually represent the feature."
+        },
+        "title": {
+            "type": "string",
+            "required": false,
+            "description": "Title of the feature."
+        },
+        "subtitle": {
+            "type": "string",
+            "required": false,
+            "description": "Subtitle or brief tagline for the feature."
+        },
+        "description": {
+            "type": "text",
+            "required": false,
+            "description": "Detailed description of the feature."
+        },
+        "link": {
+            "type": "component",
+            "component": "link.link",
+            "required": false,
+            "description": "Optional link component for more information about the feature."
+        }
+    }
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "carousel": {
+      "type": "component",
+      "component": "carousel.carousel",
+      "repeatable": false
+    },
+    "features": {
+      "type": "component",
+      "component": "card.card",
+      "repeatable": true
+    },
+    "services": {
+      "type": "component",
+      "component": "home.services",
+      "repeatable": false
+    },
+    "who_we_are": {
+      "type": "component",
+      "component": "home.who-we-are",
+      "repeatable": false
+    },
+    "who_we_are_banner": {
+      "type": "component",
+      "component": "home.who-we-are-banner",
+      "repeatable": false
+    },
+    "highlights": {
+      "type": "component",
+      "component": "card.card",
+      "repeatable": true
+    },
+    "contact_banner": {
+      "type": "component",
+      "component": "home.contact-banner",
+      "repeatable": false
+    },
+    "form": {
+      "type": "component",
+      "component": "home.form",
+      "repeatable": false
+    }
+  }
+}

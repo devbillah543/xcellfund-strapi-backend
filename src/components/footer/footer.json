@@ -1,0 +1,40 @@
+{
+    "collectionName": "components_footer_footer",
+    "info": {
+        "displayName": "Footer",
+        "description": "Main footer component that includes branding, quicklinks, and copyright information"
+    },
+    "attributes": {
+        "subscription":{
+            "type": "component",
+            "component": "footer.subscription",
+            "required": false,
+            "description": "Subscription section for newsletter sign-ups (optional)"
+        },
+        "branding": {
+            "type": "component",
+            "component": "footer.branding",
+            "required": true,
+            "description": "Branding information for the footer (required)"
+        },
+        "quicklinks": {
+            "type": "component",
+            "component": "footer.quicklink",
+            "repeatable": false,
+            "required": true,
+            "description": "List of quicklinks to be displayed in the footer (required)"
+        },
+        "location": {
+            "type": "component",
+            "component": "footer.location",
+            "required": true,
+            "description": "Location information for the footer (required)"
+        },
+        "copyright": {
+            "type": "component",
+            "component": "footer.copyright",
+            "required": true,
+            "description": "Copyright information for the footer (required)"
+        }
+    }
+}

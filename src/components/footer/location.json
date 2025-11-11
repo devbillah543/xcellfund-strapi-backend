@@ -1,0 +1,36 @@
+{
+    "collectionName": "components_footer_location",
+    "info": {
+        "displayName": "Location",
+        "description": "Footer location component for displaying address and map information"
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true,
+            "description": "Title for the location section (required)"
+        },
+        "email": {
+            "type": "component",
+            "required": false,
+            "component": "link.link",
+            "description": "Email address to be displayed in the footer (optional)"
+        },
+        "phone": {
+            "type": "component",
+            "required": false,
+            "component": "link.link",
+            "description": "Phone number to be displayed in the footer (optional)"
+        },
+        "address": {
+            "type": "text",
+            "required": true,
+            "description": "Physical address to be displayed in the footer (required)"
+        },
+        "map_embed_url": {
+            "type": "string",
+            "required": false,
+            "description": "Optional URL for embedding a map (e.g., Google Maps iframe link)"
+        }
+    }
+}

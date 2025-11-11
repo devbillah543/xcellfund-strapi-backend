@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_topbar_contact",
+  "info": {
+    "displayName": "Contacts",
+    "description": "Reusable contact component for displaying contact information such as email and phone number"
+  },
+  "attributes": {
+    "contact_links": {
+      "type": "component",
+      "component": "link.link",
+      "repeatable": true,
+      "description": "List of contact links with icons and URLs"
+    }
+  }
+}

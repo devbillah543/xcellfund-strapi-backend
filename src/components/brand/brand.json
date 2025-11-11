@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_brand_brand",
+  "info": {
+    "displayName": "Brand",
+    "description": "Reusable brand component with customizable styles for logo, colors, and typography"
+  },
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"],
+      "description": "Brand logo image"
+    },
+    "alt": {
+      "type": "string",
+      "default": "",
+      "description": "Alt text for the brand logo"
+    }
+  }
+}

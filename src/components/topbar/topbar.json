@@ -1,0 +1,21 @@
+{
+    "collectionName": "components_topbar_topbar",
+    "info": {
+        "displayName": "Topbar",
+        "description": "Reusable topbar component for displaying brand, contacts, and social media links"
+    },
+    "attributes": {
+        "contacts": {
+            "type": "component",
+            "component": "topbar.contacts",
+            "required": true,
+            "description": "Contacts component for displaying contact information"
+        },
+        "socials": {
+            "type": "component",
+            "component": "topbar.socials",
+            "required": true,
+            "description": "Socials component for displaying social media links"
+        }
+    }
+}

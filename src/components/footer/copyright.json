@@ -1,0 +1,21 @@
+{
+    "collectionName": "components_footer_copyright",
+    "info": {
+        "displayName": "Copyright",
+        "description": "Footer copyright component for displaying copyright information"
+    },
+    "attributes": {
+        "links": {
+            "type": "component",
+            "component": "link.link",
+            "repeatable": true,
+            "required": false,
+            "description": "Optional list of links to be displayed alongside the copyright text"
+        },
+        "text": {
+            "type": "string",
+            "required": true,
+            "description": "Copyright text to be displayed in the footer (required)"
+        }
+    }
+}

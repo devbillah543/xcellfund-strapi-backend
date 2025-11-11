@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_carousel_carousel_item",
+  "info": {
+    "displayName": "Carousel Item",
+    "description": "An individual item within a carousel component, containing an image and optional caption."
+  },
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"],
+      "description": "The image to be displayed in the carousel item."
+    },
+    "title": {
+      "type": "string",
+      "required": false,
+      "description": "Optional title text to be displayed with the image."
+    },
+    "description": {
+      "type": "text",
+      "required": false,
+      "description": "Optional caption or description for the carousel item."
+    },
+    "link": {
+      "type": "component",
+      "component": "link.link",
+      "repeatable": false,
+      "required": false,
+      "description": "Optional link associated with the carousel item."
+    }
+  }
+}

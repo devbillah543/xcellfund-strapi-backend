@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_who_we_are",
+  "info": {
+    "name": "Who We Are",
+    "description": "Who We Are section component for the home page."
+  },
+  "attributes": {
+    "left_content": {
+      "type": "component",
+      "component": "card.card",
+      "required": true,
+      "description": "Content to be displayed on the left side of the hero section."
+    },
+    "right_content": {
+      "type": "component",
+      "component": "card.card",
+      "required": true,
+      "description": "Content to be displayed on the right side of the hero section."
+    }
+  }
+}

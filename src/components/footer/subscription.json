@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_footer_subscription",
+    "info": {
+        "displayName": "Subscription",
+        "description": "Footer subscription component for newsletter sign-ups"
+    },
+    "attributes": {
+        "input": {
+            "type": "component",
+            "component": "form.input",
+            "required": true,
+            "description": "Input field for email subscription (required)"
+        },
+        "social_links": {
+            "type": "component",
+            "component": "link.link",
+            "repeatable": true,
+            "required": false,
+            "description": "Optional social media links for the subscription section"
+        }
+    }
+}

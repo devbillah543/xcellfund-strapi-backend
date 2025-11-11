@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_home_who_we_are_banner",
+  "info": {
+    "displayName": "Who We Are Banner",
+    "description": "A banner component for the Who We Are section on the home page."
+  },
+  "attributes": {
+    "content": {
+      "type": "component",
+      "component": "card.card",
+      "required": true,
+      "description": "Content to be displayed on the left side of the hero section."
+    },
+    "images": {
+      "type": "media",
+      "allowedTypes": ["images"],
+      "multiple": true,
+      "required": true,
+      "description": "Images to be displayed in the banner."
+    }
+  }
+}

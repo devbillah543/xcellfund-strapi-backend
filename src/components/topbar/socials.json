@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_topbar_socials",
+    "info": {
+        "displayName": "Socials",
+        "description": "Reusable social media links component for displaying social media profiles with customizable icons and URLs"
+    },
+    "attributes": {
+        "social_links": {
+            "type": "component",
+            "component": "link.link",
+            "repeatable": true,
+            "description": "List of social media links with icons and URLs"
+        }
+    }
+}

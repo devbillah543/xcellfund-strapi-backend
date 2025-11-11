@@ -1,0 +1,21 @@
+{
+    "collectionName": "components_footer_quicklink",
+    "info": {
+        "displayName": "Quicklink",
+        "description": "Footer quicklink component for displaying a list of important links"
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true,
+            "description": "Title for the quicklink section (required)"
+        },
+        "links": {
+            "type": "component",
+            "component": "link.link",
+            "repeatable": true,
+            "required": true,
+            "description": "List of important quick links (required, repeatable)"
+        }
+    }
+}
