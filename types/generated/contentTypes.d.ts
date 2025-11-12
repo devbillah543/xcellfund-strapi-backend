@@ -638,6 +638,44 @@ export interface ApiPrivatePlacementPrivatePlacement
   };
 }
 
+export interface ApiSeriesDFundingSeriesDFunding
+  extends Struct.SingleTypeSchema {
+  collectionName: 'series_d_fundings';
+  info: {
+    displayName: 'Series D+ Funding';
+    pluralName: 'series-d-fundings';
+    singularName: 'series-d-funding';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::series-d-funding.series-d-funding'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1154,6 +1192,7 @@ declare module '@strapi/strapi' {
       'api::home.home': ApiHomeHome;
       'api::investment.investment': ApiInvestmentInvestment;
       'api::private-placement.private-placement': ApiPrivatePlacementPrivatePlacement;
+      'api::series-d-funding.series-d-funding': ApiSeriesDFundingSeriesDFunding;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
