@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_common_Hero",
+  "info": {
+    "displayName": "Hero",
+    "description": "Hero section component with title, subtitle, background image, and call-to-action link"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "description": "Main title text displayed in the hero section"
+    },
+    "subtitle": {
+      "type": "string",
+      "required": false,
+      "description": "Subtitle text displayed below the main title"
+    },
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"],
+      "description": "Background image for the hero section"
+    },
+    "link": {
+      "type": "component",
+      "component": "link.link",
+      "repeatable": false,
+      "required": false,
+      "description": "Call-to-action link or button displayed in the hero section"
+    }
+  }
+}

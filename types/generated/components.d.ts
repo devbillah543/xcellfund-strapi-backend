@@ -53,6 +53,20 @@ export interface CarouselCarouselItem extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonHero extends Struct.ComponentSchema {
+  collectionName: 'components_common_Hero';
+  info: {
+    description: 'Hero section component with title, subtitle, background image, and call-to-action link';
+    displayName: 'Hero';
+  };
+  attributes: {
+    background_image: Schema.Attribute.Media<'images'>;
+    link: Schema.Attribute.Component<'link.link', false>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface FooterBranding extends Struct.ComponentSchema {
   collectionName: 'components_footer_branding';
   info: {
@@ -335,6 +349,7 @@ declare module '@strapi/strapi' {
       'card.card': CardCard;
       'carousel.carousel': CarouselCarousel;
       'carousel.carousel-item': CarouselCarouselItem;
+      'common.hero': CommonHero;
       'footer.branding': FooterBranding;
       'footer.copyright': FooterCopyright;
       'footer.footer': FooterFooter;
