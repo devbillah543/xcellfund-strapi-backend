@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "series_d_fundings",
+  "collectionName": "collateralized_fundings",
   "info": {
-    "singularName": "series-d-funding",
-    "pluralName": "series-d-fundings",
-    "displayName": "Series D+ Funding"
+    "singularName": "collateralized-funding",
+    "pluralName": "collateralized-fundings",
+    "displayName": "Collateralized Funding"
   },
   "options": {
     "draftAndPublish": true

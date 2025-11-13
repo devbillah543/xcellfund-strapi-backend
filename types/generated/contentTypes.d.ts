@@ -430,6 +430,44 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCollateralizedFundingCollateralizedFunding
+  extends Struct.SingleTypeSchema {
+  collectionName: 'collateralized_fundings';
+  info: {
+    displayName: 'Collateralized Funding';
+    pluralName: 'collateralized-fundings';
+    singularName: 'collateralized-funding';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::collateralized-funding.collateralized-funding'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
   collectionName: 'contact_uses';
   info: {
@@ -453,6 +491,120 @@ export interface ApiContactUsContactUs extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     location_header: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiConvertibleDebentureConvertibleDebenture
+  extends Struct.SingleTypeSchema {
+  collectionName: 'convertible_debentures';
+  info: {
+    displayName: 'Convertible Debenture';
+    pluralName: 'convertible-debentures';
+    singularName: 'convertible-debenture';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::convertible-debenture.convertible-debenture'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiDebtRestructuringDebtRestructuring
+  extends Struct.SingleTypeSchema {
+  collectionName: 'debt_restructurings';
+  info: {
+    displayName: 'Debt Restructuring';
+    pluralName: 'debt-restructurings';
+    singularName: 'debt-restructuring';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::debt-restructuring.debt-restructuring'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiEquityLineFundingEquityLineFunding
+  extends Struct.SingleTypeSchema {
+  collectionName: 'equity_line_fundings';
+  info: {
+    displayName: 'Equity Line Funding';
+    pluralName: 'equity-line-fundings';
+    singularName: 'equity-line-funding';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::equity-line-funding.equity-line-funding'
+    > &
+      Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'seo.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
@@ -638,6 +790,81 @@ export interface ApiPrivatePlacementPrivatePlacement
   };
 }
 
+export interface ApiRegAFundingRegAFunding extends Struct.SingleTypeSchema {
+  collectionName: 'reg_a_fundings';
+  info: {
+    displayName: 'REG A Funding';
+    pluralName: 'reg-a-fundings';
+    singularName: 'reg-a-funding';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::reg-a-funding.reg-a-funding'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSeedInvestmentSeedInvestment
+  extends Struct.SingleTypeSchema {
+  collectionName: 'seed_investments';
+  info: {
+    displayName: 'Seed Investment';
+    pluralName: 'seed-investments';
+    singularName: 'seed-investment';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::seed-investment.seed-investment'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSeriesDFundingSeriesDFunding
   extends Struct.SingleTypeSchema {
   collectionName: 'series_d_fundings';
@@ -666,6 +893,43 @@ export interface ApiSeriesDFundingSeriesDFunding
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::series-d-funding.series-d-funding'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiStockLoanStockLoan extends Struct.SingleTypeSchema {
+  collectionName: 'stock_loans';
+  info: {
+    displayName: 'Stock Loan';
+    pluralName: 'stock-loans';
+    singularName: 'stock-loan';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::stock-loan.stock-loan'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -1186,13 +1450,20 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::collateralized-funding.collateralized-funding': ApiCollateralizedFundingCollateralizedFunding;
       'api::contact-us.contact-us': ApiContactUsContactUs;
+      'api::convertible-debenture.convertible-debenture': ApiConvertibleDebentureConvertibleDebenture;
+      'api::debt-restructuring.debt-restructuring': ApiDebtRestructuringDebtRestructuring;
+      'api::equity-line-funding.equity-line-funding': ApiEquityLineFundingEquityLineFunding;
       'api::form-submission.form-submission': ApiFormSubmissionFormSubmission;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::investment.investment': ApiInvestmentInvestment;
       'api::private-placement.private-placement': ApiPrivatePlacementPrivatePlacement;
+      'api::reg-a-funding.reg-a-funding': ApiRegAFundingRegAFunding;
+      'api::seed-investment.seed-investment': ApiSeedInvestmentSeedInvestment;
       'api::series-d-funding.series-d-funding': ApiSeriesDFundingSeriesDFunding;
+      'api::stock-loan.stock-loan': ApiStockLoanStockLoan;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

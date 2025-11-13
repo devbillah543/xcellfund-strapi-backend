@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "series_d_fundings",
+  "collectionName": "convertible_debentures",
   "info": {
-    "singularName": "series-d-funding",
-    "pluralName": "series-d-fundings",
-    "displayName": "Series D+ Funding"
+    "singularName": "convertible-debenture",
+    "pluralName": "convertible-debentures",
+    "displayName": "Convertible Debenture"
   },
   "options": {
     "draftAndPublish": true

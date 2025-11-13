@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "series_d_fundings",
+  "collectionName": "seed_investments",
   "info": {
-    "singularName": "series-d-funding",
-    "pluralName": "series-d-fundings",
-    "displayName": "Series D+ Funding"
+    "singularName": "seed-investment",
+    "pluralName": "seed-investments",
+    "displayName": "Seed Investment"
   },
   "options": {
     "draftAndPublish": true

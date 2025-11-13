@@ -1,10 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "series_d_fundings",
+  "collectionName": "reg_a_fundings",
   "info": {
-    "singularName": "series-d-funding",
-    "pluralName": "series-d-fundings",
-    "displayName": "Series D+ Funding"
+    "singularName": "reg-a-funding",
+    "pluralName": "reg-a-fundings",
+    "displayName": "REG A Funding"
   },
   "options": {
     "draftAndPublish": true
