@@ -752,6 +752,157 @@ export interface ApiInvestmentInvestment extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiPartnershipProcessPartnershipProcess
+  extends Struct.SingleTypeSchema {
+  collectionName: 'partnership_processes';
+  info: {
+    displayName: 'Partnership Process';
+    pluralName: 'partnership-processes';
+    singularName: 'partnership-process';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::partnership-process.partnership-process'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPartnershipStrategyPartnershipStrategy
+  extends Struct.SingleTypeSchema {
+  collectionName: 'partnership_strategies';
+  info: {
+    displayName: 'Partnership Strategy';
+    pluralName: 'partnership-strategies';
+    singularName: 'partnership-strategy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::partnership-strategy.partnership-strategy'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPartnershipVsInvestmentPartnershipVsInvestment
+  extends Struct.SingleTypeSchema {
+  collectionName: 'partnership_vs_investments';
+  info: {
+    displayName: 'Partnership vs Investment';
+    pluralName: 'partnership-vs-investments';
+    singularName: 'partnership-vs-investment';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::partnership-vs-investment.partnership-vs-investment'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPartnershipPartnership extends Struct.SingleTypeSchema {
+  collectionName: 'partnerships';
+  info: {
+    displayName: 'Partnership';
+    pluralName: 'partnerships';
+    singularName: 'partnership';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::partnership.partnership'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiPrivatePlacementPrivatePlacement
   extends Struct.SingleTypeSchema {
   collectionName: 'private_placements';
@@ -1459,6 +1610,10 @@ declare module '@strapi/strapi' {
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::investment.investment': ApiInvestmentInvestment;
+      'api::partnership-process.partnership-process': ApiPartnershipProcessPartnershipProcess;
+      'api::partnership-strategy.partnership-strategy': ApiPartnershipStrategyPartnershipStrategy;
+      'api::partnership-vs-investment.partnership-vs-investment': ApiPartnershipVsInvestmentPartnershipVsInvestment;
+      'api::partnership.partnership': ApiPartnershipPartnership;
       'api::private-placement.private-placement': ApiPrivatePlacementPrivatePlacement;
       'api::reg-a-funding.reg-a-funding': ApiRegAFundingRegAFunding;
       'api::seed-investment.seed-investment': ApiSeedInvestmentSeedInvestment;
