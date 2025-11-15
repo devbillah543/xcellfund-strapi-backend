@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "web_publications",
+  "info": {
+    "singularName": "web-publication",
+    "pluralName": "web-publications",
+    "displayName": "Web Publication"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "common.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "contact_banner": {
+      "type": "component",
+      "component": "home.contact-banner",
+      "repeatable": false
+    }
+  }
+}

@@ -575,6 +575,44 @@ export interface ApiDebtRestructuringDebtRestructuring
   };
 }
 
+export interface ApiDesktopSoftwareDesktopSoftware
+  extends Struct.SingleTypeSchema {
+  collectionName: 'desktop_softwares';
+  info: {
+    displayName: 'Desktop Software';
+    pluralName: 'desktop-softwares';
+    singularName: 'desktop-software';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::desktop-software.desktop-software'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEquityLineFundingEquityLineFunding
   extends Struct.SingleTypeSchema {
   collectionName: 'equity_line_fundings';
@@ -715,6 +753,44 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiInternetAdvertisingInternetAdvertising
+  extends Struct.SingleTypeSchema {
+  collectionName: 'internet_advertisings';
+  info: {
+    displayName: 'Internet Advertising';
+    pluralName: 'internet-advertisings';
+    singularName: 'internet-advertising';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::internet-advertising.internet-advertising'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiInvestmentInvestment extends Struct.SingleTypeSchema {
   collectionName: 'investments';
   info: {
@@ -743,6 +819,78 @@ export interface ApiInvestmentInvestment extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::investment.investment'
     > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMobileApplicationMobileApplication
+  extends Struct.SingleTypeSchema {
+  collectionName: 'mobile_applications';
+  info: {
+    displayName: 'Mobile Application';
+    pluralName: 'mobile-applications';
+    singularName: 'mobile-application';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::mobile-application.mobile-application'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiNicheNiche extends Struct.SingleTypeSchema {
+  collectionName: 'niches';
+  info: {
+    displayName: 'Niche';
+    pluralName: 'niches';
+    singularName: 'niche';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::niche.niche'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'seo.seo', false>;
@@ -978,6 +1126,43 @@ export interface ApiRegAFundingRegAFunding extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiSaasSolutionSaasSolution extends Struct.SingleTypeSchema {
+  collectionName: 'saas_solutions';
+  info: {
+    displayName: 'Saas Solution';
+    pluralName: 'saas-solutions';
+    singularName: 'saas-solution';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::saas-solution.saas-solution'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiSeedInvestmentSeedInvestment
   extends Struct.SingleTypeSchema {
   collectionName: 'seed_investments';
@@ -1081,6 +1266,118 @@ export interface ApiStockLoanStockLoan extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::stock-loan.stock-loan'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWebPropertyWebProperty extends Struct.SingleTypeSchema {
+  collectionName: 'web_properties';
+  info: {
+    displayName: 'Web Property';
+    pluralName: 'web-properties';
+    singularName: 'web-property';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::web-property.web-property'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWebPublicationWebPublication
+  extends Struct.SingleTypeSchema {
+  collectionName: 'web_publications';
+  info: {
+    displayName: 'Web Publication';
+    pluralName: 'web-publications';
+    singularName: 'web-publication';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::web-publication.web-publication'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWebTechnologyWebTechnology extends Struct.SingleTypeSchema {
+  collectionName: 'web_technologies';
+  info: {
+    displayName: 'Web Technology';
+    pluralName: 'web-technologies';
+    singularName: 'web-technology';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::web-technology.web-technology'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -1605,20 +1902,28 @@ declare module '@strapi/strapi' {
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::convertible-debenture.convertible-debenture': ApiConvertibleDebentureConvertibleDebenture;
       'api::debt-restructuring.debt-restructuring': ApiDebtRestructuringDebtRestructuring;
+      'api::desktop-software.desktop-software': ApiDesktopSoftwareDesktopSoftware;
       'api::equity-line-funding.equity-line-funding': ApiEquityLineFundingEquityLineFunding;
       'api::form-submission.form-submission': ApiFormSubmissionFormSubmission;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::internet-advertising.internet-advertising': ApiInternetAdvertisingInternetAdvertising;
       'api::investment.investment': ApiInvestmentInvestment;
+      'api::mobile-application.mobile-application': ApiMobileApplicationMobileApplication;
+      'api::niche.niche': ApiNicheNiche;
       'api::partnership-process.partnership-process': ApiPartnershipProcessPartnershipProcess;
       'api::partnership-strategy.partnership-strategy': ApiPartnershipStrategyPartnershipStrategy;
       'api::partnership-vs-investment.partnership-vs-investment': ApiPartnershipVsInvestmentPartnershipVsInvestment;
       'api::partnership.partnership': ApiPartnershipPartnership;
       'api::private-placement.private-placement': ApiPrivatePlacementPrivatePlacement;
       'api::reg-a-funding.reg-a-funding': ApiRegAFundingRegAFunding;
+      'api::saas-solution.saas-solution': ApiSaasSolutionSaasSolution;
       'api::seed-investment.seed-investment': ApiSeedInvestmentSeedInvestment;
       'api::series-d-funding.series-d-funding': ApiSeriesDFundingSeriesDFunding;
       'api::stock-loan.stock-loan': ApiStockLoanStockLoan;
+      'api::web-property.web-property': ApiWebPropertyWebProperty;
+      'api::web-publication.web-publication': ApiWebPublicationWebPublication;
+      'api::web-technology.web-technology': ApiWebTechnologyWebTechnology;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

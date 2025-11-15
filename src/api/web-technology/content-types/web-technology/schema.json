@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "web_technologies",
+  "info": {
+    "singularName": "web-technology",
+    "pluralName": "web-technologies",
+    "displayName": "Web Technology"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "common.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "contact_banner": {
+      "type": "component",
+      "component": "home.contact-banner",
+      "repeatable": false
+    }
+  }
+}
