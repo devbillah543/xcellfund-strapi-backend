@@ -537,6 +537,158 @@ export interface ApiConvertibleDebentureConvertibleDebenture
   };
 }
 
+export interface ApiCorporateAccountabilityCorporateAccountability
+  extends Struct.SingleTypeSchema {
+  collectionName: 'corporate_accountabilities';
+  info: {
+    displayName: 'Corporate Accountability';
+    pluralName: 'corporate-accountabilities';
+    singularName: 'corporate-accountability';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::corporate-accountability.corporate-accountability'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCorporateFocusCorporateFocus
+  extends Struct.SingleTypeSchema {
+  collectionName: 'corporate_foci';
+  info: {
+    displayName: 'Corporate Focus';
+    pluralName: 'corporate-foci';
+    singularName: 'corporate-focus';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::corporate-focus.corporate-focus'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCorporateResponsibilityCorporateResponsibility
+  extends Struct.SingleTypeSchema {
+  collectionName: 'corporate_responsibilities';
+  info: {
+    displayName: 'Corporate Responsibility';
+    pluralName: 'corporate-responsibilities';
+    singularName: 'corporate-responsibility';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::corporate-responsibility.corporate-responsibility'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCorporateSustainabilityCorporateSustainability
+  extends Struct.SingleTypeSchema {
+  collectionName: 'corporate_sustainabilities';
+  info: {
+    displayName: 'Corporate Sustainability';
+    pluralName: 'corporate-sustainabilities';
+    singularName: 'corporate-sustainability';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::corporate-sustainability.corporate-sustainability'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiDebtRestructuringDebtRestructuring
   extends Struct.SingleTypeSchema {
   collectionName: 'debt_restructurings';
@@ -613,6 +765,43 @@ export interface ApiDesktopSoftwareDesktopSoftware
   };
 }
 
+export interface ApiEmployeePrideEmployeePride extends Struct.SingleTypeSchema {
+  collectionName: 'employee_prides';
+  info: {
+    displayName: 'Employee Pride';
+    pluralName: 'employee-prides';
+    singularName: 'employee-pride';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::employee-pride.employee-pride'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEquityLineFundingEquityLineFunding
   extends Struct.SingleTypeSchema {
   collectionName: 'equity_line_fundings';
@@ -641,6 +830,44 @@ export interface ApiEquityLineFundingEquityLineFunding
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::equity-line-funding.equity-line-funding'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiExecutiveViewpointExecutiveViewpoint
+  extends Struct.SingleTypeSchema {
+  collectionName: 'executive_viewpoints';
+  info: {
+    displayName: 'Executive Viewpoint';
+    pluralName: 'executive-viewpoints';
+    singularName: 'executive-viewpoint';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::executive-viewpoint.executive-viewpoint'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -753,6 +980,44 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiInternationalImpactInternationalImpact
+  extends Struct.SingleTypeSchema {
+  collectionName: 'international_impacts';
+  info: {
+    displayName: 'International Impact';
+    pluralName: 'international-impacts';
+    singularName: 'international-impact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::international-impact.international-impact'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiInternetAdvertisingInternetAdvertising
   extends Struct.SingleTypeSchema {
   collectionName: 'internet_advertisings';
@@ -781,6 +1046,44 @@ export interface ApiInternetAdvertisingInternetAdvertising
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::internet-advertising.internet-advertising'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiInvestmentStrategyInvestmentStrategy
+  extends Struct.SingleTypeSchema {
+  collectionName: 'investment_strategies';
+  info: {
+    displayName: 'Investment Strategy';
+    pluralName: 'investment-strategies';
+    singularName: 'investment-strategy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::investment-strategy.investment-strategy'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -891,6 +1194,43 @@ export interface ApiNicheNiche extends Struct.SingleTypeSchema {
     hero: Schema.Attribute.Component<'common.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::niche.niche'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOurStrategyOurStrategy extends Struct.SingleTypeSchema {
+  collectionName: 'our_strategies';
+  info: {
+    displayName: 'Our Strategy';
+    pluralName: 'our-strategies';
+    singularName: 'our-strategy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::our-strategy.our-strategy'
+    > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'seo.seo', false>;
@@ -1041,6 +1381,43 @@ export interface ApiPartnershipPartnership extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::partnership.partnership'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPhilanthropyPhilanthropy extends Struct.SingleTypeSchema {
+  collectionName: 'philanthropies';
+  info: {
+    displayName: 'Philanthropy';
+    pluralName: 'philanthropies';
+    singularName: 'philanthropy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::philanthropy.philanthropy'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -1266,6 +1643,71 @@ export interface ApiStockLoanStockLoan extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::stock-loan.stock-loan'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'seo.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSubscriberSubscriber extends Struct.CollectionTypeSchema {
+  collectionName: 'subscribers';
+  info: {
+    displayName: 'Subscriber';
+    pluralName: 'subscribers';
+    singularName: 'subscriber';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::subscriber.subscriber'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiVisionAndGoalVisionAndGoal extends Struct.SingleTypeSchema {
+  collectionName: 'vision_and_goals';
+  info: {
+    displayName: 'Vision and Goal';
+    pluralName: 'vision-and-goals';
+    singularName: 'vision-and-goal';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    contact_banner: Schema.Attribute.Component<'home.contact-banner', false>;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'common.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::vision-and-goal.vision-and-goal'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
@@ -1901,26 +2343,38 @@ declare module '@strapi/strapi' {
       'api::collateralized-funding.collateralized-funding': ApiCollateralizedFundingCollateralizedFunding;
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::convertible-debenture.convertible-debenture': ApiConvertibleDebentureConvertibleDebenture;
+      'api::corporate-accountability.corporate-accountability': ApiCorporateAccountabilityCorporateAccountability;
+      'api::corporate-focus.corporate-focus': ApiCorporateFocusCorporateFocus;
+      'api::corporate-responsibility.corporate-responsibility': ApiCorporateResponsibilityCorporateResponsibility;
+      'api::corporate-sustainability.corporate-sustainability': ApiCorporateSustainabilityCorporateSustainability;
       'api::debt-restructuring.debt-restructuring': ApiDebtRestructuringDebtRestructuring;
       'api::desktop-software.desktop-software': ApiDesktopSoftwareDesktopSoftware;
+      'api::employee-pride.employee-pride': ApiEmployeePrideEmployeePride;
       'api::equity-line-funding.equity-line-funding': ApiEquityLineFundingEquityLineFunding;
+      'api::executive-viewpoint.executive-viewpoint': ApiExecutiveViewpointExecutiveViewpoint;
       'api::form-submission.form-submission': ApiFormSubmissionFormSubmission;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
+      'api::international-impact.international-impact': ApiInternationalImpactInternationalImpact;
       'api::internet-advertising.internet-advertising': ApiInternetAdvertisingInternetAdvertising;
+      'api::investment-strategy.investment-strategy': ApiInvestmentStrategyInvestmentStrategy;
       'api::investment.investment': ApiInvestmentInvestment;
       'api::mobile-application.mobile-application': ApiMobileApplicationMobileApplication;
       'api::niche.niche': ApiNicheNiche;
+      'api::our-strategy.our-strategy': ApiOurStrategyOurStrategy;
       'api::partnership-process.partnership-process': ApiPartnershipProcessPartnershipProcess;
       'api::partnership-strategy.partnership-strategy': ApiPartnershipStrategyPartnershipStrategy;
       'api::partnership-vs-investment.partnership-vs-investment': ApiPartnershipVsInvestmentPartnershipVsInvestment;
       'api::partnership.partnership': ApiPartnershipPartnership;
+      'api::philanthropy.philanthropy': ApiPhilanthropyPhilanthropy;
       'api::private-placement.private-placement': ApiPrivatePlacementPrivatePlacement;
       'api::reg-a-funding.reg-a-funding': ApiRegAFundingRegAFunding;
       'api::saas-solution.saas-solution': ApiSaasSolutionSaasSolution;
       'api::seed-investment.seed-investment': ApiSeedInvestmentSeedInvestment;
       'api::series-d-funding.series-d-funding': ApiSeriesDFundingSeriesDFunding;
       'api::stock-loan.stock-loan': ApiStockLoanStockLoan;
+      'api::subscriber.subscriber': ApiSubscriberSubscriber;
+      'api::vision-and-goal.vision-and-goal': ApiVisionAndGoalVisionAndGoal;
       'api::web-property.web-property': ApiWebPropertyWebProperty;
       'api::web-publication.web-publication': ApiWebPublicationWebPublication;
       'api::web-technology.web-technology': ApiWebTechnologyWebTechnology;

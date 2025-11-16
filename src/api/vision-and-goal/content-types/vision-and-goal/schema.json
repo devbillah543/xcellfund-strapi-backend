@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "vision_and_goals",
+  "info": {
+    "singularName": "vision-and-goal",
+    "pluralName": "vision-and-goals",
+    "displayName": "Vision and Goal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "hero": {
+      "type": "component",
+      "component": "common.hero",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "contact_banner": {
+      "type": "component",
+      "component": "home.contact-banner",
+      "repeatable": false
+    }
+  }
+}
