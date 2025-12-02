@@ -1,4 +1,4 @@
-export default () => ({
+export default ({ env }) => ({
     /** CKEditor configuration */
     ckeditor5: {
         enabled: true,
@@ -19,10 +19,10 @@ export default () => ({
             connections: {
                 default: {
                     connection: {
-                        host: process.env.REDIS_HOST || "127.0.0.1",
-                        port: process.env.REDIS_PORT || 6379,
-                        password: process.env.REDIS_PASSWORD || null,
-                        db: process.env.REDIS_DB || 0,
+                        host: env("REDIS_HOST", "127.0.0.1"),
+                        port: env.int("REDIS_PORT", 6379),
+                        password: env("REDIS_PASSWORD", null),
+                        db: env.int("REDIS_DB", 0),
                     },
                     settings: {
                         debug: false,
@@ -40,7 +40,7 @@ export default () => ({
                 name: "redis",
                 options: {
                     connection: "default",
-                    ttl: process.env.CACHING_TIMEOUT || 3600 * 1000, // 1 hour
+                    ttl: env.int("CACHING_TIMEOUT", 3600 * 1000),
                 },
             },
 
