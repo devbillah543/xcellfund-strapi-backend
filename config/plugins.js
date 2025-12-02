@@ -1,4 +1,4 @@
-export default ({ env }) => ({
+module.exports = ({ env }) => ({
     /** CKEditor configuration */
     ckeditor5: {
         enabled: true,
